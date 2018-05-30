@@ -1,0 +1,60 @@
+const navs = [{
+    name: '车源申领',
+    key: 'clue',
+    path: '/',
+    children: [{
+        name: '未处理的线索',
+        key: 'untreated',
+        path: '/untreated',
+        closable: false,
+    }, {
+        name: '我的任务',
+        key: 'myTask',
+        path: '/myTask',
+        closable: false,
+    }, {
+        name: '列表页',
+        key: 'tabulation',
+        path: '/tabulation',
+        closable: false,
+    }, {
+        name: '我的车源',
+        key: 'myCarsource',
+        path: '/myCarsource',
+        closable: false,
+    }, {
+        name: '我的提醒',
+        key: 'myRemind',
+        path: '/myRemind',
+        closable: false,
+    }, {
+        name: 'CC监控',
+        key: 'ccMonitor',
+        path: '/ccMonitor',
+        closable: false,
+    }, {
+        name: '匿名线索',
+        key: 'anonymousClue',
+        path: '/anonymousClue',
+        closable: false,
+    }, {
+        name: '二次维护',
+        key: 'twomaintenance',
+        path: '/twomaintenance',
+        closable: false,
+    }]
+}, {
+    name: '车源',
+    key: 'carOperator',
+    path: '/car',
+    children: [{
+        name: '评估订单关闭',
+        key: 'carOperatorList',
+        path: '/car/list',
+    }, {
+        name: '电话监控',
+        key: 'carOperatorMonitor',
+        path: '/car/monitor',
+    }]
+}];
+export default navs;
