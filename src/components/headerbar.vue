@@ -1,7 +1,7 @@
 <template>
   <el-row :gutter="20">
     <el-col :span="4">
-        <h3 class="padt5">人人车实时运营平台</h3>
+        <h3 class="padt5">平台</h3>
     </el-col>
     <el-col :span="20">
     <el-form :inline="true" :model="formInline" size="small" class="small-form">
@@ -41,7 +41,7 @@
     data() {
       return {
         formInline: {
-          hotmobile: '60642257',
+          hotmobile: '1111111',
           cno_current: '',
           password: 'this is not a real password',
           bind_number_current: '',

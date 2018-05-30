@@ -36,9 +36,6 @@ router.beforeEach((to, from, next) => {
     .then(() => {
       const userInfo = router.app.$store.state.auth.auth.auth;
       if (userInfo && userInfo.data && userInfo.data.name) {
-        new window.RrcWatermark().init({
-          text: userInfo.data.name || '人人车',
-        });
         return true;
       } else {
         return false;

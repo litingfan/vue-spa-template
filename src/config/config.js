@@ -1,3 +1,3 @@
 export default {
-    base_url: '//owner-crm.shanyishanmei.com',
+    base_url: '//www.baidu.com', // 接口请求地址
 };
