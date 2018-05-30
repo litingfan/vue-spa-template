@@ -66,13 +66,6 @@
         npm install -g cnpm --registry=https://registry.npm.taobao.org
 
 
-## 快速开始
-
-    git clone https://github.com/hanan198501/vue-spa-template.git 
-    cd vue-spa-template
-    cnpm install
-    npm run dev
-
 ## 命令列表：
 
     #开启本地开发服务器，监控项目文件的变化，实时构建并自动刷新浏览器，浏览器访问 http://localhost:8081
@@ -87,30 +80,9 @@
     #运行单元测试
     npm run unit
     
-## 前后端分离
-
-项目基于 spa 方式实现前后端分离，服务器通过 nginx 区分前端页面和后端接口请求，分发到不同服务。前端物理上只有一个入口页面, 路由由前端控制（基于vue-router），根据不同的 url 加载相应数据和组件进行渲染。
-
 ## 模块化
 
 开发时可以使用 ES2015 module 语法，构建时每个文件会编译成 amd 模块。
-
-## 组件化
-
-整个应用通过 vue 组件的方式搭建起来，通过 vue-router 控制相应组件的展现，组件树结构如下：
-
-    app.vue                         根组件（整个应用只有一个）
-        ├──view1.vue                    页面级组件，放在 views 目录里面，有子组件时，可以建立子目录
-        │   ├──component1.vue               功能组件，公用的放在 components 目录，否则放在 views 子目录
-        │   ├──component2.vue
-        │   └──component3.vue
-        ├──view2.vue
-        │   ├──component1.vue
-        │   └──component4.vue
-        └──view3.vue
-            ├──component5.vue
-            ……
-
 
 ## 单元测试
 
@@ -118,19 +90,8 @@
 执行 `npm run unit` 时会遍历所有的 `spec.js` 文件，产出测试报告在 `test/unit/coverage` 目录。
 
 
-## 联调方式
-
-前后端分离后，由于服务端和前端的开发环境处于2台不同的机器上，前端的异步请求需要代理到后端机器中。
-联调的时候，只需通过 proxy 参数运行 dev 脚本即可，所有 mock 目录下定义的接口将会转发到 proxy 参数指定的机器：
-
-    # 172.16.36.90:8083 为后端机器的环境地址
-    npm run dev -- --proxy=172.16.36.90:8083
-
-这样，如果 mock 目录下有定义了接口 /api/hello ，将会转发到 http://172.16.36.90/:8083/api/hello
-
 ## 相关资源
 
-- QQ群：568815621
 - vue.js 官网：[https://vuejs.org/](https://vuejs.org/)
 - vue.js 中文网： [http://vuefe.cn/](http://vuefe.cn/)
 - vue-router 文档：[http://router.vuejs.org/zh-cn/index.html/](http://router.vuejs.org/zh-cn/index.html)
